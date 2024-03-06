@@ -1,0 +1,21 @@
+footer ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+footer ul li a{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+footer ul li svg{
+    height: 18px;
+    width: 18px;
+}

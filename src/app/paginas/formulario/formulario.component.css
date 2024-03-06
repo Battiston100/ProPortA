@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+.container-formulario{
+    border-radius: 16px;
+    border: 1px solid #0D6EFD;
+    background: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(61, 139, 253, 0.15);
+    width: 1000px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 56px 134px;
+    margin-top: 80px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container-formulario section{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+.container-formulario section .voltar{
+    
+    background-color: transparent;
+    border: none;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+}
+header h1{
+    color: #0D6EFD;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 0 35px;
+    gap: 5px;
+    justify-content: center;
+    width: 50%;
+}
+
+
+form label{
+    font-weight: bold;
+}
+
+form input{
+    margin-bottom: 8px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #0D6EFD;
+}
+
+form .botoes {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+form .botoes .cancelar{
+    width: 35%;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #0D6EFD;
+    font-weight: 900;
+    color: #0D6EFD;
+    cursor: pointer;
+    transition: 0.4s;
+}
+form .botoes .cancelar:hover{
+    background-color: #0D6EFD;
+    color: #fff;
+}
+
+form .botoes .enviar{
+    width: 35%;
+    padding: 5px;
+    background-color: #0D6EFD;
+    border: none;
+    font-weight: 900;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.4s;
+}
+form .botoes .enviar:hover{
+    background-color: #fff;
+    color: #0D6EFD;
+    border: 1px solid #0D6EFD;
+}
+
+form .botoes .desabilitado{
+    width: 35%;
+    padding: 5px;
+    background-color: rgb(165, 165, 165);
+    border: 1px solid black;
+    font-weight: 900;
+    color: #686666;
+}
+
+form .mensagem-erro{
+    color: #ff0000;
+    font-size: 12px;
+    font-weight: 500;
+}
+

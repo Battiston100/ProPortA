@@ -1,0 +1,45 @@
+
+<section class="container-formulario">
+    <section>
+        <button class="voltar" routerLink="/home">
+            <img src="assets/arrow-left.png" alt="">
+            <span>Voltar</span>
+        </button>
+    </section>
+
+
+    <header>
+        <img src="assets/adicionar-contato.png" alt="">
+        <h1>Fale Comigo</h1>
+    </header>
+
+    <form [formGroup]="contatoForm" (ngSubmit)="salvarContato()">
+
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" placeholder="Digite seu nome" formControlName="nome">
+        @if (contatoForm.get('nome')?.errors && contatoForm.get('nome')?.touched) {
+            <div class="mensagem-erro">Campo Obrigatório</div>
+        }
+        
+
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Digite seu email" formControlName="email">
+        @if (contatoForm.get('email')?.errors?.['required'] && contatoForm.get('email')?.touched) {
+            <div class="mensagem-erro">Campo Obrigatório</div>
+        }
+        @if (contatoForm.get('email')?.errors?.['email'] && contatoForm.get('email')?.touched) {
+            <div class="mensagem-erro">Formato de email inválido</div>
+        }
+
+
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" placeholder="Digite seu telefone" formControlName="telefone">
+
+        <div class="botoes">
+            <button (click)="cancelar()" class="cancelar" type="button">Cancelar</button>
+
+            <button [disabled]="contatoForm.invalid" [ngClass]="contatoForm.valid ? 'enviar' : 'desabilitado'" type="submit">Enviar</button>
+        </div>
+    </form>
+</section>
+

@@ -1,0 +1,23 @@
+main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .sobre{
+    width: 457px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+main .sobre h1{
+    font-size: 45px;
+}
+
+main img{
+    height: 400px;
+    
+}
